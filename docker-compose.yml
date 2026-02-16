@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+
+  backend:
+    build: ./backend_flask
+    container_name: emp_backend
+    ports:
+      - "5000:5000"
+
+
+  frontend:
+    build: ./frontend/frontend
+    container_name: emp_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
