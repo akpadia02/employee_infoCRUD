@@ -31,7 +31,7 @@ jobs:
       run: |
         docker build \
         -t ${{ secrets.DOCKER_USERNAME }}/emp-frontend:latest \
-        ./frontend
+        ./frontend/frontend
 
 
     - name: Push Backend Image
